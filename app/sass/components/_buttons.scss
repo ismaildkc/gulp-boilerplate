@@ -1,0 +1,108 @@
+.button {
+    transition: all .3s;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        padding: 5px;
+    }
+
+    &-size {
+
+        &-lg {
+            font-size: 20px;
+            padding: 10px 50px;
+        }
+
+        &-md {
+            font-size: 16px;
+            padding: 5px 20px;
+        }
+
+        &-sm {
+            font-size: 14px;
+            padding: 4px 25px;
+        }
+
+        &-xs {
+            font-size: 12px;
+            padding: 2.5px 15px;
+        }
+    }
+
+    &-white {
+
+        &--blank {
+            border: 1px solid #fff;
+            color: #fff;
+
+            &:hover {
+                background: #fff;
+                color: $fontColor;
+            }
+        }
+
+        &--fill {
+            border: 1px solid #fff;
+            background: #fff;
+            color: $fontColor;
+
+            &:hover {
+                border: 1px solid #fff;
+                color: #fff;
+                background: transparent;
+            }
+        }
+    }
+
+    &-black {
+
+        &--blank {
+            border: 1px solid #000;
+            color: #000;
+
+            &:hover {
+                background: #000;
+                color: #fff;
+            }
+        }
+
+        &--fill {
+            border: 1px solid #000;
+            background: #000;
+            color: #fff;
+
+            &:hover {
+                opacity: .8;
+                background: transparent;
+            }
+        }
+    }
+
+    &-primary {
+
+        &--blank {
+            border: 1px solid $colorPrimary;
+            color: $colorPrimary;
+
+            &:hover {
+                background: $colorPrimary;
+                color: #fff;
+            }
+        }
+
+        &--fill {
+            border: 1px solid $colorPrimary;
+            background: $colorPrimary;
+            color: #fff;
+
+            &:hover {
+                opacity: .8;
+                background: transparent;
+                color: $colorPrimary;
+            }
+        }
+    }
+}

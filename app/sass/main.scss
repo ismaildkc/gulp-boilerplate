@@ -1,0 +1,24 @@
+/*----------  Variables  ----------*/
+@import "helpers/variables";
+
+/*----------  Plugins  ----------*/
+// @import "~bootstrap/scss/bootstrap";
+/*----------  Plugins  ----------*/
+
+/*----------  Mixins & Reset  ----------*/
+@import "helpers/mixins";
+@import "helpers/reset";
+
+// /*----------  Base  ----------*/
+@import "base/typography";
+@import "base/general";
+@import "base/plugins";
+
+// /*----------  Helpers  ----------*/
+ @import "helpers/helpers";
+
+// /*----------  Components  ----------*/
+@import "components/header";
+@import "components/forms";
+@import "components/footer";
+@import "components/buttons";

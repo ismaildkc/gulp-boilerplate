@@ -1,0 +1,77 @@
+// Bootsrap 5 column
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: floor($grid-gutter-width / 2);
+    padding-left: ceil($grid-gutter-width / 2);
+}
+
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
+}
+// Bootsrap 5 column
+
+// Margin, Padding, Width etc
+@include helperClasses('xs', $screen-xs-min);
+@include helperClasses('sm', $screen-sm-min);
+@include helperClasses('md', $screen-md-min);
+@include helperClasses('lg', $screen-lg-min);
+
+// Text Positions - center, left, right, justify
+@include helperGeneralResponsiveClasses('xs', $screen-xs-min);
+@include helperGeneralResponsiveClasses('sm', $screen-sm-min);
+@include helperGeneralResponsiveClasses('md', $screen-md-min);
+@include helperGeneralResponsiveClasses('lg', $screen-lg-min);
+
+// Text Positions - center, left, right, justify
+@include helperDisplayFlex('xs', $screen-xs-min);
+@include helperDisplayFlex('sm', $screen-sm-min);
+@include helperDisplayFlex('md', $screen-md-min);
+@include helperDisplayFlex('lg', $screen-lg-min);
+
+// Text Positions - center, left, right, justify
+@include helperDisplayGrid('xs', $screen-xs-min);
+@include helperDisplayGrid('sm', $screen-sm-min);
+@include helperDisplayGrid('md', $screen-md-min);
+@include helperDisplayGrid('lg', $screen-lg-min);
+
+// Positions
+.position {
+
+    &--static {
+        position: static;
+    }
+
+    &--relative {
+        position: relative;
+    }
+
+    &--absolute {
+        position: absolute;
+    }
+}

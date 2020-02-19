@@ -1,0 +1,40 @@
+// Colors
+$colorPrimary: #ff1a65;
+$colorSecondary: #000;
+$fontColor: #7B7B7B;
+
+$yellow: #FFD600;
+$grayDark: #4E535D;
+$gray: #DDDDDD;
+$grayLight: #F6F6F6;
+
+// Grid Config
+$grid-gutter-width : 15px;
+
+$page-spacing-xs: 15px;
+$page-spacing-sm: 30px;
+$page-spacing-md: 70px;
+
+// :root {
+//   --page-spacing: 70px;
+// }
+// @media (max-width: 768px){
+//   :root {
+//     --page-spacing: 10px;
+//   }
+// }
+// @support(--color: red){
+//    header{
+//       background: --color;
+//     }
+// }
+
+// Transitions
+@mixin transition-fast {
+  transition: all 0.2s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+@mixin transition-slow {
+  transition: all 0.3s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}

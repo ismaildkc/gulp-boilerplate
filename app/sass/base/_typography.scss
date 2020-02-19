@@ -1,0 +1,162 @@
+// Font Families
+$fontFamily: Montserrat, Helvetica, Arial, sans-serif;
+
+// Font Weights
+$fontThin: 100;
+$fontXLight: 200;
+$fontLight: 300;
+$fontRegular: 400;
+$fontSemibold: 600;
+$fontBold: 700;
+$fontExtraBold: 800;
+$fontBlack: 900;
+
+.font-weight-thin {
+    font-weight: $fontThin;
+}
+
+.font-weight-extra-light {
+    font-weight: $fontXLight;
+}
+
+.font-weight-light {
+    font-weight: $fontLight;
+}
+
+.font-weight-regular {
+    font-weight: $fontRegular;
+}
+
+.font-weight-semi-bold {
+    font-weight: $fontSemibold;
+}
+
+.font-weight-bold {
+    font-weight: $fontBold;
+}
+
+.font-weight-extra-bold {
+    font-weight: $fontExtraBold;
+}
+
+.font-weight-black {
+    font-weight: $fontBlack;
+}
+
+// Line Heights
+.line-height {
+
+    &-1 {
+        line-height: 1;
+    }
+}
+
+// Font Colors
+.text-color {
+
+    &-primary {
+        color: $colorPrimary;
+    }
+
+    &-secondary {
+        color: $colorSecondary;
+    }
+
+    &-white {
+        color: #fff;
+    }
+
+    &-black {
+        color: #000;
+    }
+}
+
+// Wrap
+.text-nowrap {
+  white-space: nowrap;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .h7, .h8 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+p{
+  margin-bottom: 5px;
+}
+
+h1, .h1 {
+  font-size: 36px;
+
+  @media (max-width: $screen-md-max) {
+      font-size: 28px;
+  }
+
+  @media (max-width: $screen-sm-max) {
+      font-size: 26px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+      font-size: 24px;
+  }
+}
+
+h2, .h2 {
+  font-size: 32px;
+
+  @media (max-width: $screen-sm-max) {
+      font-size: 28px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+      font-size: 25px;
+  }
+}
+
+h3, .h3 {
+  font-size: 2.5em;
+  font-weight: 800;
+
+  @media (max-width: $screen-sm-max) {
+      font-size: 20px;
+  }
+}
+
+h4, .h4 {
+  font-size: 2em;
+  font-weight: 800;
+
+  @media (max-width: $screen-sm-max) {
+      font-size: 20px;
+  }
+}
+
+h5, .h5 {
+  font-size: 20px;
+
+  @media (max-width: $screen-xs-max), (max-height: 600px) {
+      font-size: 15px;
+  }
+}
+
+h6, .h6 {
+  font-size: 15px;
+}
+
+.heading{
+  color: $yellow;
+  font-size: 1.8em;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.headingh2{
+  color: $yellow;
+  font-size: 4em;
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1;
+  @media (max-width: 768px){
+    font-size: 2.5em;
+  }
+}

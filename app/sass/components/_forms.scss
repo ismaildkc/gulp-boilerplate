@@ -1,0 +1,585 @@
+input, select, textarea, button {
+  border: none;
+  border-radius: 0;
+  padding: 7px 10px;
+
+  &:focus {
+    outline: 0;
+    border-color: #999;
+  }
+}
+
+.form-group{
+  position: relative;
+  .form-control{
+    border-radius: 0;
+    background: $grayLight;
+    &:focus {
+      background-color: $grayLight;
+      border-color: $gray;
+      outline: 0;
+      box-shadow: none;
+    }
+    &.form-warning{
+      border-color: #ff0000;
+    }
+  }
+  .formAlert{
+    position: absolute;
+    right: 1.5em;
+    color: #ff0000;
+    display: none;
+  }
+}
+
+// Product Search
+.tab-component{
+  padding: 30px 2px 10px 2px;
+  &.content-tab{
+    .tab-content{
+      padding: 30px;
+    }
+  }
+  .nav{
+    .nav-item{
+      flex-grow: 1;
+      flex-basis: 0;
+      background: $grayLight;
+      &:last-child{
+        a{
+          border-right: 1px solid $gray;
+        }
+      }
+      a{
+        padding: 10px 0;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.9em;
+        color: $grayDark;
+        display: block;
+        position: relative;
+        cursor: pointer;
+        border: 1px solid $gray;
+        border-bottom: none;
+        border-right: none;
+        @include transition-slow;
+
+        // anasayfa orta search component mobile tasma fix
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // #anasayfa orta search component mobile tasma fix
+        &:hover, &.active{
+          background: $yellow;
+          // &:before{
+          //   height: 10px;
+          // }
+        }
+        &:before{
+          content: '';
+          background: $yellow;
+          border-left: 2px solid $yellow;
+          border-right: 2px solid $yellow;
+          position: absolute;
+          height: 0px;
+          width: 100%;
+          bottom: 100%;
+          left: 0;
+          @include transition-slow;
+        }
+      }
+    }
+  }
+
+  .tab-content{
+    border: 1px solid $gray;
+    // border-top: none;
+    padding: 15px 30px;
+    background: #fff;
+
+    // Serach Bar
+    .search-input{
+      border-bottom: 1px solid $gray;
+      .no-result{
+        position: absolute;
+        right: 2em;
+        font-size: 1em;
+        color: $grayDark;
+        display: none;
+      }
+      input.searchTerm{
+        width: 100%;
+      }
+      input#midSearchInput{
+
+      }
+      button.searchButton{
+        color: $grayDark;
+      }
+    }
+
+    .mid-image{
+      img{
+        float: none;
+        margin: 0 auto;
+      }
+    }
+    .tab-pane{
+      // a{
+      //   font-weight: 600;
+      //   @include transition-fast;
+      //   &:hover{
+      //     color: $yellow;
+      //   }
+      // }
+    }
+  }
+
+  @media (max-width: 768px){
+    padding: 10px 2px 10px 2px;
+    &.content-tab{
+      .tab-content{
+        padding: 15px;
+      }
+    }
+  }
+}
+
+.contact-form{
+  background: $grayLight;
+  padding: 1em;
+  display: inline-block;
+  width: 100%;
+}
+
+// Custom selectbox
+.custom-select-wrapper {
+  width: 100%;
+  .dropdown.bootstrap-select{
+    width: 100% !important;
+  }
+  button.dropdown-toggle{
+    border-radius: 0;
+    border: none;
+    background: $grayLight;
+    padding: 10px;
+    color: $fontColor;
+    &:focus{
+      outline: none !important;
+      border: none;
+    }
+  }
+  .dropdown-item.active,
+  .dropdown-item:active {
+    color: $grayDark;
+    text-decoration: none;
+    background-color: $yellow;
+  }
+}
+
+// Custom Radio
+.custom-radio{
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+      position: absolute;
+      left: -9999px;
+  }
+  [type="radio"]:checked + label,
+  [type="radio"]:not(:checked) + label
+  {
+      position: relative;
+      padding-left: 28px;
+      cursor: pointer;
+      line-height: 20px;
+      display: inline-block;
+      color: #666;
+  }
+  [type="radio"]:checked + label:before,
+  [type="radio"]:not(:checked) + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #ddd;
+      border-radius: 100%;
+      background: #fff;
+  }
+  [type="radio"]:checked + label:after,
+  [type="radio"]:not(:checked) + label:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: $yellow;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      border-radius: 100%;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+  }
+  [type="radio"]:not(:checked) + label:after {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+  [type="radio"]:checked + label:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+}
+
+// Custom selectbox OLD
+// .custom-select-wrapper {
+//   position: relative;
+//   user-select: none;
+//   width: 100%;
+//   font-size: 0.88em;
+//   .custom-select {
+//     display: flex;
+//     flex-direction: column;
+//     border: none;
+//     padding: 0;
+//     margin: 0;
+//     height: 100%;
+//     .custom-select__trigger {
+//       position: relative;
+//       display: flex;
+//       align-items: center;
+//       justify-content: space-between;
+//       padding: 0 10px;
+//       height: 45px;
+//       background: $grayLight;
+//       cursor: pointer;
+//       p{
+//         margin: 0;
+//       }
+//       .arrow {
+//         position: relative;
+//         height: 7px;
+//         width: 10px;
+//
+//         &::before,
+//         &::after {
+//           content: "";
+//           position: absolute;
+//           bottom: 0px;
+//           width: 0.15rem;
+//           height: 100%;
+//           background-color: $grayDark;
+//           transition: all 0.5s;
+//         }
+//
+//         &::before {
+//           left: -2px;
+//           transform: rotate(-45deg);
+//         }
+//         &::after {
+//           left: 2px;
+//           transform: rotate(45deg);
+//         }
+//       }
+//     }
+//     &.open{
+//       .custom-options {
+//         opacity: 1;
+//         visibility: visible;
+//         pointer-events: all;
+//       }
+//       .arrow::before {
+//         transform: rotate(45deg);
+//       }
+//       .arrow::after {
+//         transform: rotate(-45deg);
+//       }
+//     }
+//
+//     .custom-options {
+//       position: absolute;
+//       display: block;
+//       top: 100%;
+//       left: 0;
+//       right: 0;
+//       background: $gray;
+//       transition: all 0.5s;
+//       opacity: 0;
+//       visibility: hidden;
+//       pointer-events: none;
+//       z-index: 2;
+//       .custom-option {
+//         position: relative;
+//         display: block;
+//         padding: 0 10px;
+//         cursor: pointer;
+//         @include transition-slow;
+//         height: 45px;
+//         &:hover {
+//           background-color: $yellow;
+//         }
+//         &.selected {
+//           background-color: $yellow;
+//         }
+//
+//         p{
+//           height: 100%;
+//           display: flex;
+//           align-items: center;
+//           border-bottom: 1px solid $grayDark;
+//         }
+//       }
+//     }
+//   }
+// }
+// #Custom selectbox OLD
+
+
+// Custom Checkbox
+.custom-checkbox {
+  display: inline-block;
+  .check-container {
+    top: 0px;
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+
+    &:hover input ~ .checkmark .sq {
+      background-color: #fff;
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      &:checked ~ .checkmark:after {
+        display: block;
+      }
+      &:checked ~ .checkmark .sq {
+        background-color: #fff;
+      }
+    }
+
+    .checkmark {
+      display: block;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 7px;
+        top: 1px;
+        width: 6px;
+        height: 15px;
+        border: solid $yellow;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+      }
+      .sq {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #fff;
+        border: 1px solid $grayDark;
+      }
+    }
+  }
+  p {
+    padding-left: 30px;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+  @media (max-height: 850px) {
+    p {
+      font-size: 12px;
+      padding-left: 25px;
+    }
+
+    .check-container .checkmark .sq {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+// Content Form
+.content-form{
+  .form-group{
+    .input-wrapper,
+    .custom-select-wrapper{
+      font-size: 0.9em;
+      margin: 0;
+      flex-grow: 1;
+      flex-basis: 0;
+      margin-right: 1em;
+      label, input, textarea{
+        &::placeholder{
+          color: transparent;
+          visibility: hidden;
+          @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            visibility: visible;
+          }
+        }
+      }
+    }
+    .custom-select-wrapper{
+      border: 1px solid #ced4da;
+      // margin-left: -20px;
+      button.dropdown-toggle{
+        height: 35px;
+        padding: 6px 10px;
+      }
+      .dropdown-menu{
+        li{
+          &:before{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .custom-checkbox p{
+    font-size: 0.65em;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  @media (max-width: 768px){
+    .form-group{
+      label, input, textarea{
+        // font-size: .8em;
+        &::placeholder{
+          color: inherit !important;
+          visibility: visible !important;
+          font-size: .8em;
+        }
+      }
+      label:not([for=kvk]), .input-label-wrapper{
+        display: none;
+      }
+    }
+  }
+}
+
+// Defaul Checkbox
+.def_checkbox{
+  font-size: 2em !important;
+}
+label[for=kvk]{
+  font-size: 1em !important;
+  display: inline;
+}
+
+
+// Flatpicker Datepicker
+.flatpickr-calendar{
+  .flatpickr-months{
+    height: 45px;
+  }
+  .flatpickr-weekdays{
+    height: 40px;
+    span.flatpickr-weekday{
+      background: $yellow;
+      color: $grayDark;
+      margin-right: 1px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .flatpickr-day{
+    border-radius: 0;
+    border: none;
+    color: $grayDark;
+    &.selected{
+      background: $yellow;
+    }
+    &.today{
+      border: 2px solid $yellow;
+    }
+    &:hover{
+      background: #e6e6e6;
+    }
+  }
+}
+
+// Button - Icon
+.flatpickr{
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  svg{
+    position: absolute;
+    right: 0;
+    background: #fff;
+    width: 25px !important;
+    height: 25px !important;
+    border: 2px solid white;
+    color: $yellow;
+  }
+}
+
+
+// Custom Dropdown
+.dropdown{
+  .dropdown-menu{
+    width: 100%;
+    border-radius: 0;
+    background: $gray;
+    padding: 0;
+    text-align: center;
+    .bs-searchbox{
+      padding:0;
+
+      input{
+        background: $gray;
+        border-bottom: 1px solid #bdbdbd;
+        padding: 10px;
+        color:$grayDark;
+
+        &:focus{
+          box-shadow: none !important;
+          border-radius: 0;
+          border-bottom: 1px solid #bdbdbd;
+          border-top: 0;
+          border-left: 0;
+          border-right: 0;
+        }
+      }
+    }
+
+    li{
+      display: block;
+
+      &.no-results{
+        background: $gray;
+        color:$grayDark;
+      }
+    }
+    a{
+      color: $grayDark;
+      padding: 10px 0;
+      &:hover{
+        background: $yellow;
+      }
+    }
+  }
+  svg{
+    color: $yellow;
+    font-size: 1.5em;
+    margin-left: 5px;
+  }
+}
+
+// SONDAKKAFIXLERIBOYLEISMIOLURAQ
+.flex-09{
+  flex: 0.93 !important;
+}

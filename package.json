@@ -1,0 +1,43 @@
+{
+  "name": "gulp-boilerplate",
+  "version": "1.0.0",
+  "description": "gulp-boilerplate",
+  "main": "assets/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/"
+  },
+  "keywords": [],
+  "author": "Ismail Dikici",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/"
+  },
+  "homepage": "https://gitlab.com/",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "autoprefixer": "^9.4.5",
+    "browser-sync": "^2.26.7",
+    "del": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "postcss-scss": "^2.0.0",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "uikit": "^3.3.3-dev.bb6d9de08"
+  }
+}
